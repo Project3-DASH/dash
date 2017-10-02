@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Georgeyoo/dash/issues"
   },
-  "homepage": "https://github.com/Georgeyoo/dash#readme"
+  "homepage": "https://github.com/Georgeyoo/dash#readme",
+  "dependencies": {
+    "mysql": "^2.14.1"
+  }
 }

@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router,Route} from "react-router-dom";
+//import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
+import Search from "../components/Search/Search";
 import Body from './Body';
 import Footer from './Footer';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <Body />
-        <Footer />
-      </div>
+        <Router>
+          <div className="App">
+            <Navbar />
+              <hr/>
+              <Route exact path = "/" component={Search}/>
+              <hr/>
+            <Body />
+            <Footer />
+          </div>
+        </Router>
     );
   }
 }

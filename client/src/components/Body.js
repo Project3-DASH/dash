@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Products from './Products';
+import CategoryList from "./Categories-left";
 
 const BodyStyle = {
 	marginTop: "250px",
@@ -13,7 +14,9 @@ class Body extends Component {
 				<div className="row justify-content-md-center">
 					<div className="col-sm-4">
 						<div className="well">
-							<h1> Side panel </h1>
+							<h1> Categories </h1>
+                            <hr/>
+                            <CategoryList/>
 						</div>
 					</div>
 					<div className="col-sm-8">

@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Express only serves static assets in production
 console.log("NODE_ENV: ", process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 
@@ -41,34 +42,26 @@ const connection = mysql.createConnection({
   database: "dash"
 });
 
-connection.connect((err) => {
-	if(err) throw err;
-	console.log("Connected to DB!");
+connection.connect();
+
+app.get("/api/allProducts",function(req,res){
+    connection.query('SELECT * FROM products', function(err, rows, fields) {
+        connection.end();
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.');
+    });
 });
 
-// app.get("/",function(req,res){
-//     connection.query('SELECT * from user LIMIT 2', function(err, rows, fields) {
-//         connection.end();
-//         if (!err)
-//             console.log('The solution is: ', rows);
-//         else
-//             console.log('Error while performing Query.');
-//     });
-// });
-
-
-
-
-// app.set('views', path.join(__dirname, './client/public/index'));
-
-
-
-
-// app.use('/', index);
-
-
-
-
-
+app.post("/api/addProducts",function(req,res){
+    connection.query("INSERT INTO products (name, company, category, image) VALUES ('test', 'test', 'test', 'test');", function(err, rows, fields) {
+        connection.end();
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.');
+    });
+});
 
 app.listen(port, () => console.log("Listening on port " + port));

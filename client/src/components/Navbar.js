@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import './Navbar.css';
 // import LogoImg from 'img/logo.png';
 
-const NavbarStyle = {
-  marginBottom: '10px',
-  color: 'white',
-};
+// const NavbarStyle = {
+//   marginBottom: '10px',
+//   color: 'white',
+// };
 
 class Navbar extends Component {
 	render() {

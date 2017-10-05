@@ -26,3 +26,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.jumbotron {
+  background: url("http://fc08.deviantart.net/fs71/f/2012/071/6/e/purple_blue_wallpaper_by_ceeeko-d4sj64x.jpg");
+  height: 400px;
+}

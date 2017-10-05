@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Modals} from './Modals';
+import {ShareButtons, ShareCounts, generateShareIcon} from 'react-share';
 
 
 class Modal extends Component {
@@ -49,7 +50,8 @@ class Modal extends Component {
 
         {showModal ?
           <Modals onClose={this.hideModal}>
-            Modal content
+            Share on Social 
+                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hey! Check the link below to win cool products!! " data-via="dash" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           </Modals> : null}
 
         {showLazyModal ?

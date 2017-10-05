@@ -9,9 +9,13 @@ import Footer from './Footer';
 class App extends Component {
   render() {
     return (
-          <div className="App">
+		<div className="App">
             <Navbar />
-            <Body />
+            {/* Jumbotron */}
+		        <div className="jumbotron text-center">
+		          <h3><em>Find & Win Cool Products</em></h3>
+		        </div>
+			<Body />
             <Footer />
           </div>
     );

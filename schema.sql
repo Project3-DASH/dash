@@ -9,6 +9,7 @@ CREATE TABLE products (
     name VARCHAR (50) UNIQUE,
     company VARCHAR (50) UNIQUE,
     category VARCHAR(50) NOT NULL,
+    image VARCHAR(255) UNIQUE,
     datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -1,0 +1,2 @@
+INSERT INTO products (product_name, company, category, image) VALUES ("Iphone 8", "Apple", "Technology", "https://cdn.macrumors.com/article-new/2017/09/iphone-7-plus-vs-iphone-8-plus-duo.jpg");
+INSERT INTO products (product_name, company, category, image) VALUES ("Kitten Mittens", "Paddy's Pub", "Pet", "http://cdn.snowboarding.transworld.net/blogs.dir/442/files/2011/02/sunnye.jpg");

@@ -41,10 +41,10 @@ const connection = mysql.createConnection({
   database: "dash"
 });
 
-connection.connect((err) => {
-	if(err) throw err;
-	console.log("Connected to DB!");
-});
+// connection.connect((err) => {
+// 	if(err) throw err;
+// 	console.log("Connected to DB!");
+// });
 
 // app.get("/",function(req,res){
 //     connection.query('SELECT * from user LIMIT 2', function(err, rows, fields) {
@@ -55,6 +55,28 @@ connection.connect((err) => {
 //             console.log('Error while performing Query.');
 //     });
 // });
+
+connection.connect();
+
+app.get("/api/allProducts",function(req,res){
+        connection.query('SELECT * FROM products', function(err, rows, fields) {
+                connection.end();
+                if (!err)
+                        console.log('The solution is: ', rows);
+                else
+                    console.log('Error while performing Query.');
+            });
+    });
+
+app.post("/api/addProducts",function(req,res){
+        connection.query("INSERT INTO products (name, company, category, image) VALUES ('test', 'test', 'test', 'test');", function(err, rows, fields) {
+                connection.end();
+                if (!err)
+                        console.log('The solution is: ', rows);
+                else
+                    console.log('Error while performing Query.');
+            });
+    });
 
 
 

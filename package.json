@@ -4,20 +4,28 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cls-bluebird": "^2.0.1",
     "express": "^4.16.1",
+    "method-override": "^2.3.10",
     "mysql": "^2.14.1",
+    "mysql2": "^1.4.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-page-click": "^4.0.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "sequelize": "^4.13.5",
+    "sequelize-cli": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }

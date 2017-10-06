@@ -12,14 +12,14 @@ class Body extends Component {
 
 			<div className="container-fluid" style={ BodyStyle }>
 				<div className="row justify-content-md-center">
-					<div className="col-sm-4">
+					<div className="col-sm-5">
 						<div className="well">
 							<h1> Categories </h1>
                             <hr/>
                             <CategoryList/>
 						</div>
 					</div>
-					<div className="col-sm-8">
+					<div className="col-sm-7">
 						<Products />
 					</div>
 				</div>

@@ -3,7 +3,7 @@ import Products from './Products';
 import CategoryList from "./Categories-left";
 
 const BodyStyle = {
-	marginTop: "250px",
+	marginTop: "10px",
 };
 
 class Body extends Component {

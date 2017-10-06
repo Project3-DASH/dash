@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import {Modals} from './Modals';
 import {ShareButtons, ShareCounts, generateShareIcon} from 'react-share';
-import md5 from "md5";
 
 
 class Modal extends Component {
-  constructor(props){
-    super(props);
+	constructor(props){
+		super(props);
 
-      this.state = {
-        showModal: false,
-        showLazyModal: false
-      };
-  }
+		  this.state = {
+		    showModal: false,
+		    showLazyModal: false
+		  };
+	}
 
   hideLazyModal = () => {
     this.setState({showLazyModal: false});
@@ -52,8 +51,7 @@ class Modal extends Component {
         {showModal ?
           <Modals onClose={this.hideModal}>
             Share on Social 
-                <a href={'https://twitter.com/intent/tweet/?text=' + md5(this.state.email)}  className="twitter-share-button" data-size="large" data-via="dash">Tweet</a>
-    
+                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hey! Check the link below to win cool products!! " data-via="dash" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           </Modals> : null}
 
         {showLazyModal ?

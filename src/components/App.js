@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 import Body from './Body';
 import Footer from './Footer';
 
-
 class App extends Component {
   render() {
     return (
@@ -13,7 +12,7 @@ class App extends Component {
             <Navbar />
             {/* Jumbotron */}
 		        <div className="jumbotron text-center">
-		          <em>Find & Win Cool Products</em>
+		          <h3><em>Find & Win Cool Products</em></h3>
 		        </div>
 			<Body />
             <Footer />

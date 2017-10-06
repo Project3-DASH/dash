@@ -27,6 +27,7 @@ app.use(methodOverride("_method"));
 
 // Express only serves static assets in production
 console.log("NODE_ENV: ", process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static('client/build'));
 
@@ -52,14 +53,10 @@ require("./routes/productRoute.js")(app);
 //     res.sendFile(path.join(__dirname, "./client/public/index.html"));
 // });
 
-
-
-
-
-
 // Starts the server to begin listening
 db.sequelize.sync().then(function () {
     app.listen(port, function() {
         console.log("App Listening on PORT " + port);
     })
 });
+

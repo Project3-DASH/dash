@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Products from './Products';
-import CategoryList from "./Categories-left";
 
 const BodyStyle = {
-	marginTop: "10px",
+	marginTop: "250px",
 };
 
 class Body extends Component {
@@ -12,14 +11,12 @@ class Body extends Component {
 
 			<div className="container-fluid" style={ BodyStyle }>
 				<div className="row justify-content-md-center">
-					<div className="col-sm-5">
+					<div className="col-sm-4">
 						<div className="well">
-							<h1> Categories </h1>
-                            <hr/>
-                            <CategoryList/>
+							<h1> Side panel </h1>
 						</div>
 					</div>
-					<div className="col-sm-7">
+					<div className="col-sm-8">
 						<Products />
 					</div>
 				</div>
@@ -28,5 +25,6 @@ class Body extends Component {
 	}
 
 }
+
 
 export default Body;

@@ -3,6 +3,7 @@
 }
 
 .App-logo {
+  background-image: url("http://luxeboi.com/wp-content/uploads/2017/02/Luxury-Logo-Design-D-63-For-free-logo-design-software-with-Logo-Design-D.jpg");
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -53,6 +54,9 @@ hr:after {
 }
 
 .jumbotron {
-  background: url("https://ak9.picdn.net/shutterstock/videos/17978689/preview/stock-footage-blue-particle-background.mp4");
-  height: 400px;
+  background: transparent url("http://ak9.picdn.net/shutterstock/videos/22921129/thumb/1.jpg") no-repeat center;
+  background-size: cover;
+  font-size: 50px;
+  color: white;
+  height: 300px;
 }

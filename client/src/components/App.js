@@ -13,7 +13,7 @@ class App extends Component {
             <Navbar />
             {/* Jumbotron */}
 		        <div className="jumbotron text-center">
-		          <h3><em>Find & Win Cool Products</em></h3>
+		          <em>Find & Win Cool Products</em>
 		        </div>
 			<Body />
             <Footer />

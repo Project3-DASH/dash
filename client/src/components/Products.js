@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from './Modal';
 import {Modals} from './Modals';
+import md5 from "md5";
 import {ShareButtons, ShareCounts, generateShareIcon} from 'react-share';
 
 import './Products.css';
@@ -20,6 +21,12 @@ class Products extends Component {
 
 	componentWillMount(){
 		var temp = [
+			{
+				name : "$15 Starbucks Gift Card", 
+				company : "Starbucks", 
+				category : "Food", 
+				image : "https://pbs.twimg.com/profile_images/877601376464904192/b3jangc1.jpg"
+			},
 			{
 				name : "Iphone 8", 
 				company : "Apple", 
@@ -67,7 +74,7 @@ class Products extends Component {
 							</div>
 							<div>
 								<div className= "product_title">
-									Get 10 Friends Share Your Link & You ALL Win the New iPhone X
+									Get 10 Friends Share Your Link & You ALL Win {product.company.name}
 								</div>
 								<button className="btnContainer" onClick={this.showModal}>Enter</button>	
 							</div>
@@ -80,8 +87,9 @@ class Products extends Component {
 					showModal ?
 					<Modals onClose={this.hideModal}>
 						Share on Social 
-							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hey! Check the link below to win cool products!! " data-via="dash" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</Modals> : null}
+							<a href={'https://twitter.com/intent/tweet/?text=' + md5(this.state.email)}  className="twitter-share-button" data-size="large" data-via="dash">Tweet</a>
+    
+          </Modals> : null}
 
 					{showLazyModal ?
 					<Modals onClose={this.hideLazyModal} notifyOnTouchEnd>

@@ -1,0 +1,61 @@
+.productTitle{
+    margin-bottom: 20px;
+}
+.imgContainer{
+    /* width: 50px; */
+    /* height: auto; */
+    margin: 20px
+}
+.productItem{
+    border: 1px solid black;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* justify-content: space-between; */
+    
+}
+.product_title {
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 350px
+
+}
+.btnContainer{
+    width: 200px;
+    height: 50px;
+    background-color: #247ce0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px
+
+}
+.Navbar {
+    text-align: center;
+}
+  
+.Navbar-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo {
+    background-image: url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjFj9WzvtjWAhVHrFQKHYF1A-gQjRwIBw&url=https%3A%2F%2Fcreativemarket.com%2Fblog%2Fis-the-airbnb-logo-a-copy&psig=AOvVaw2BGshCwImqvXlka4wVzSz-&ust=1507258711522285");	
+}

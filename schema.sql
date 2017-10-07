@@ -1,0 +1,39 @@
+DROP DATABASE IF EXISTS dash;
+
+CREATE DATABSE dash;
+
+DROP TABLE IF EXISTS products;
+
+CREATE TABLE products (
+    id serial PRIMARY key,
+    name VARCHAR (50) UNIQUE,
+    company VARCHAR (50) UNIQUE,
+    category VARCHAR(50) NOT NULL,
+    image VARCHAR(255) UNIQUE,
+    datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS emails;
+
+CREATE TABLE emails (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	emailaddress VARCHAR(50) DEFAULT NULL,
+	referrals int(11) DEFAULT 0,
+	datetime datetime DEFAULT CURRENT_TIMESTAMP,
+	referralcode varchar(45) DEFAULT NULL,
+	verified BOOL DEFAULT FALSE,
+	referredby VARCHAR(50) DEFAULT NULL,
+	PRIMARY KEY(id),
+	UNIQUE KEY emailaddress_UNIQUE(emailaddress )
+) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS admin;
+
+CREATE TABLE admin (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	user_name VARCHAR(50) NOT NULL,
+	company_name VARCHAR(50) NOT NULL,
+	datetime datetime DEFAULT CURRENT_TIMESTAMP,
+	category VARCHAR(50) NOT NULL,
+	PRIMARY KEY(id)
+)
